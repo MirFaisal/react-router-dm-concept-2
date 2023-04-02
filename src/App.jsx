@@ -3,13 +3,13 @@ import "./App.css";
 import About from "./components/about/About";
 import Country from "./components/country/Country";
 import Home from "./components/home/Home";
-import Layout from "./layout/layout";
+import MainLayout from "./layout/MainLayout";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout />,
+      element: <MainLayout />,
       children: [
         { path: "/", element: <Home /> },
         {
