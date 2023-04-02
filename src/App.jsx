@@ -21,10 +21,10 @@ function App() {
         },
         {
           path: "/country/:name",
-          element: <Country />,
           loader: async ({ params }) => {
             return fetch(`https://restcountries.com/v3.1/name/${params.name}`);
           },
+          element: <Country />,
         },
         { path: "/about", element: <About /> },
       ],
