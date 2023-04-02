@@ -11,7 +11,13 @@ function App() {
       path: "/",
       element: <MainLayout />,
       children: [
-        { path: "/", element: <Home /> },
+        {
+          path: "/",
+          loader: async () => {
+            return fetch("https://restcountries.com/v3.1/all");
+          },
+          element: <Home />,
+        },
         {
           path: "/home",
           element: <Home />,
