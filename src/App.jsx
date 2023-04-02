@@ -14,10 +14,10 @@ function App() {
         { path: "/", element: <Home /> },
         {
           path: "/home",
+          element: <Home />,
           loader: async () => {
             return fetch("https://restcountries.com/v3.1/all");
           },
-          element: <Home />,
         },
         {
           path: "/country/:name",

@@ -3,6 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import "./Home.css";
 const Home = () => {
   const data = useLoaderData();
+  console.log(data);
   return (
     <>
       <section>
@@ -18,6 +19,13 @@ const Home = () => {
                 </h3>
               </Link>
             ))}
+            {/* {data.map((country) => (
+              <Link key={country.cca3} to={`/country/${country.name.common}`}>
+                <h3 className="text-xl hover:underline">
+                  {country.name.common}
+                </h3>
+              </Link>
+            ))} */}
           </div>
         </div>
       </section>
