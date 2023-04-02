@@ -1,7 +1,7 @@
 import "@heroicons/react/24/solid";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -17,7 +17,9 @@ const Header = () => {
       <div className="container">
         <div className="navbar-nav py-5 flex justify-between">
           <div className="brand">
-            <h2 className="text-2xl font-bold text-white">NAVBAR</h2>
+            <Link to={"/"}>
+              <h2 className="text-2xl font-bold text-white">NAVBAR</h2>
+            </Link>
           </div>
           <ul
             className={`absolute flex flex-col left-0 w-full bg-slate-500 ${
